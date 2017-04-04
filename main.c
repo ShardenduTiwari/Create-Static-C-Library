@@ -1,39 +1,36 @@
-#include "header.h"
+
+#include"calc.h"
 int main()
 {
-	int a,b,choise;
-	printf("Enter two numbers for calculation:	");
-	scanf("%d%d",&a,&b);
-	while(1)
-	{
-		printf("\n==============MAINMENU==============\n");
-		printf("1. ADD\n");
-		printf("2. SUBTRACT\n");
-		printf("3. MULTIPLY\n");
-		printf("4. DIVIDE\n");
-		printf("5. EXIT\n");
-		printf("Please enter your choise:	\n");
-		scanf("%d",&choise);
-		switch(choise)
-		{
-			case 1:
-				sum(a,b);
-				break;
-			case 2:
-				sub(a,b);
-				break;
-			case 3:
-				mul(a,b);
-				break;
-			case 4:
-				divd(a,b);
-				break;
-			case 5:
-				exit(EXIT_SUCCESS);
-				break;
-			default:
-				printf("Wrong Option Choosed...Please try again!\n\n");
-		}
+ int a,o,n;
+ printf("Choices available:\n");
+ printf("1.factorial\n2.Square\n3.Cube\n4.even/odd");
+ printf("\nEnter the operation required:\t");
+ scanf("%d",&a);
+ printf("\nEnter the number:\t");
+ scanf("%d",&n);
+ if(a==1)
+ {
+	o=fact(n);
+  	printf("The factorial of %d is:%d",n,o);
+ }
+ else if(a==2)
+ {	o=square(n);
+	printf("The square of %d is:%d",n,o);
+ }
+ else if(a==3) 
+ {
+        o=cube(n); 
+        printf("The cube of %d is:%d",n,o);
+ }
+ else if(a==4)
+ {       o=ev_od(n);
+         printf("The square of %d is:%d",n,o);
+ }
+ else
+	printf("Wrong value choosen");
 
-	}
+ return 0;
 }
+
+
